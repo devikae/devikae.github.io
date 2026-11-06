@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>이주석 | 백엔드 엔지니어</title>
-<meta name="description" content="Java, Spring Boot 백엔드 엔지니어 이주석의 이력서와 기술 사례입니다.">
+<meta name="description" content="Java, Spring Boot 백엔드 엔지니어 이주석의 경력과 기술 사례입니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap">
@@ -163,11 +163,7 @@ p.em a, .lk { color: var(--blue); }
 .groups .group { scroll-margin-top: 16px; }
 .group p + p { margin-top: 6px; }
 @media print { .tabs { display: none !important; } }
-.toc { margin: 0; padding-left: 20px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 28px; font-size: 14px; }
-.toc a { color: var(--blue); }
 .tools { justify-content: flex-end; }
-@media (max-width: 760px) { .toc { grid-template-columns: minmax(0, 1fr); } .tools { justify-content: flex-start; } }
-@media print { .toc { display: none; } #cases { display: none; } }
 </style>
 </head>
 <body>
@@ -184,25 +180,22 @@ p.em a, .lk { color: var(--blue); }
       <dt>Blog</dt><dd><a href="https://velog.io/@tinwo" target="_blank" rel="noopener">velog.io/@tinwo</a></dd>
     </dl>
   </header>
-<section><h2>SUMMARY</h2>
-<p>Java와 Spring 기반의 SI 현장에서 약 3년간 기능 개발과 유지보수, 운영 장애 대응을 맡았습니다. 기존 코드를 분석하고 문제를 해결하며 경험을 쌓았고, 점차 “동작하게 만드는 것”을 넘어 “왜 이 방식으로 해결했는가”를 설명하는 개발자가 되고자 했습니다.</p>
-<p>이를 위해 기본기를 다시 공부하고, 개인 프로젝트 Snowthing을 기획부터 개발, 배포와 운영까지 직접 진행했습니다. 여러 구현을 비교하고 결과를 검증하면서 모든 기술에는 장점과 함께 감수해야 할 비용이 있다는 점을 배웠습니다. “은탄환은 없다”는 생각을 바탕으로, 유행이나 익숙함보다 요구사항과 시스템의 제약에 맞는 선택을 중요하게 생각합니다. 부족한 부분은 공부와 실험으로 채우며, 선택의 근거와 결과를 설명할 수 있는 엔지니어로 성장하고 있습니다.</p>
+<section><p>SI 현장에서 기능 개발, 유지보수와 운영 장애 대응을 맡았습니다. 개인 프로젝트 Snowthing에서는 동시성, 데이터 정합성, 외부 API 연동, 배포와 복구를 설계하고 검증했습니다. 각 사례에 선택 근거와 제약, 로컬 실험과 운영 기록의 구분을 함께 적었습니다.</p></section>
+<section><h2>PROJECT</h2>
+<div class="entry"><h3 class="et"><a href="https://snowthing.org">Snowthing</a> / 겨울 스포츠 커뮤니티</h3><p class="em">2026.07 ~ 진행 중 / 개인 프로젝트 / 1인 개발</p>
+<p class="domain">게시판, 중고장터, 카풀, 실시간 라이브톡, 슬로프캠을 제공합니다. 기획, 설계, 화면, API, DB, 배포, 운영을 맡았고, AI 도구가 작성한 코드도 직접 검토하고 검증했습니다.</p>
+<ul><li>기록: <a class="lk" href="https://github.com/devikae/snowthing">github.com/devikae/snowthing</a> / 저장소 docs에 ADR과 벤치마크 기록</li>
+<li>구현 규모: 커밋 328건, 병합 PR 52건, 백엔드 테스트 700건 이상, 운영 마이그레이션 32개, 설계 문서 124개 (2026-11 기준)</li>
+<li>운영 규모: EC2 t3.small 1대와 RDS, S3, CloudFront. 게시글 86건에는 시드 글이 포함됩니다. 실사용자 수와 트래픽은 아직 집계하지 않았으며, 대규모 운영 경험으로 제시하지 않습니다.</li></ul></div>
 </section>
-<section><h2>GROWTH</h2><ol class="growth">
-<li><span class="g-when">2023</span><b>SI 실무 시작</b><span>공공기관 행정 시스템 유지보수와 장애 대응</span></li>
-<li><span class="g-when">재직 중</span><b>기초 다지기</b><span>컴퓨터공학 학사(2024.04), 정보처리기사, SQLD, 리눅스마스터 2급</span></li>
-<li><span class="g-when">2025</span><b>SI 기능 고도화</b><span>지도 대시보드 표시와 화면 및 데이터 연동 개선</span></li>
-<li><span class="g-when">2026</span><b>직접 설계하고 검증</b><span>Snowthing 1인 개발 및 운영, 오픈소스 PR 머지</span></li>
-</ol></section>
 <section><h2>EXPERIENCE</h2>
-<div class="entry"><div class="entry-head"><h3>피플앤드테크놀러지<span>SI 백엔드 개발</span></h3><span class="when">2025.08 ~ 2026.04</span></div>
+<div class="entry"><h3 class="et">피플앤드테크놀러지 / SI 백엔드 개발</h3><p class="em">2025.08 ~ 2026.04</p>
 <ul><li>백엔드 API 개발, 기능 개선, 유지보수를 맡았습니다. 사용자 조작 중 화면과 데이터 상태가 어긋나는 오류와 운영 런타임 예외를 추적해 해결했습니다.</li>
 <li>Highcharts 지도 대시보드의 지역별 데이터 표시를 개선하고 현업 요청 기능을 개발했습니다.</li></ul></div>
-<div class="entry"><div class="entry-head"><h3>세이소프트<span>SI 백엔드 개발</span></h3><span class="when">2023.03 ~ 2025.08</span></div>
+<div class="entry"><h3 class="et">세이소프트 / SI 백엔드 개발</h3><p class="em">2023.03 ~ 2025.08</p>
 <ul><li>공공기관 행정 시스템, 정책 포털, 성과관리, 모바일 커뮤니티의 개발과 유지보수를 맡았습니다.</li>
 <li>서버 로그와 디버깅으로 운영 장애를 분석하고 핫픽스를 배포했습니다. 레거시 데이터 처리 로직을 리팩토링하고 Java 기반 RESTful API 연동 구조를 구축했습니다.</li></ul></div>
 </section>
-<div class="two">
 <section><h2>TECH STACK</h2>
 <dl class="kv"><dt>Language</dt><dd>Java 21, TypeScript</dd>
 <dt>Backend</dt><dd>Spring Boot 4.1, Spring Security, Spring Data JPA, Querydsl, Spring WebSocket(STOMP)</dd>
@@ -211,51 +204,6 @@ p.em a, .lk { color: var(--blue); }
 <dt>CI/CD</dt><dd>GitHub Actions, AWS OIDC</dd><dt>관측</dt><dd>Pinpoint, CloudWatch, Discord 알림</dd>
 <dt>Test</dt><dd>JUnit 5, Mockito, Spring Boot Test</dd></dl>
 </section>
-<section><h2>EDUCATION</h2><dl class="kv"><dt>2024.04</dt><dd>학점은행제 컴퓨터공학 학사</dd><dt>자격증</dt><dd>정보처리기사, SQLD, 리눅스마스터 2급</dd></dl></section>
-</div>
-<section id="project"><h2>PROJECT</h2>
-<div class="entry">
-<div class="entry-head"><h3><a href="https://snowthing.org" target="_blank" rel="noopener">Snowthing</a><span>겨울 스포츠 커뮤니티 / 개인 프로젝트 / 1인 개발</span></h3><span class="when">2026.07 ~ 진행 중</span></div>
-<p class="domain">게시판, 중고장터, 카풀, 실시간 라이브톡, 슬로프캠을 제공합니다. 기획, 설계, 화면, API, DB, 배포, 운영을 맡았습니다.</p>
-<dl class="meta"><dt>링크</dt><dd><a href="https://github.com/devikae/snowthing" target="_blank" rel="noopener">github.com/devikae/snowthing</a> / 저장소 docs에 ADR과 벤치마크 기록</dd>
-<dt>규모</dt><dd>커밋 328건, 병합 PR 52건, 백엔드 테스트 700건 이상, 운영 마이그레이션 32개 (2026-11 기준)</dd></dl>
-<div class="shots">
-        <figure><img src="assets/home.jpg" alt="Snowthing 메인 화면. 게시판 목록, 라이브톡, 오늘의 설질" width="800" height="506" loading="lazy"><figcaption>메인 화면 / 게시판, 라이브톡, 오늘의 설질</figcaption></figure>
-        <figure><img src="assets/resort-cam.jpg" alt="스키장 웹캠 화면" width="800" height="506" loading="lazy"><figcaption>슬로프 웹캠</figcaption></figure>
-        <figure><img src="assets/login.jpg" alt="로그인 화면. 이메일 로그인과 네이버, Google 간편 로그인" width="800" height="506" loading="lazy"><figcaption>로그인 / 이메일, 네이버, Google</figcaption></figure>
-      </div>
-<figure class="diagram">
-        <svg class="dg" viewBox="0 0 680 290" role="img" aria-label="Snowthing 운영 구조: 사용자가 Cloudflare를 거쳐 EC2의 Nginx로 들어오고, Next.js와 Spring Boot가 RDS, SES, S3와 연결된다. 배포는 GitHub Actions가 ECR에 이미지를 올리고 SSM이 EC2에서 실행한다.">
-          <text class="h" x="0" y="14">운영 구조</text>
-          <rect class="box" x="0" y="44" width="88" height="40" rx="4"/><text x="44" y="68" text-anchor="middle">사용자</text>
-          <rect class="box" x="118" y="44" width="112" height="40" rx="4"/><text x="174" y="62" text-anchor="middle">Cloudflare</text><text class="s" x="174" y="77" text-anchor="middle">DNS / TLS</text>
-          <rect class="grp" x="258" y="26" width="236" height="150" rx="6"/><text class="gt" x="270" y="42">EC2 / Docker Compose</text>
-          <rect class="box" x="272" y="52" width="208" height="30" rx="4"/><text x="376" y="72" text-anchor="middle">Nginx</text>
-          <rect class="box" x="272" y="100" width="98" height="58" rx="4"/><text x="321" y="124" text-anchor="middle">Next.js 16</text><text class="s" x="321" y="140" text-anchor="middle">화면</text>
-          <rect class="new" x="382" y="100" width="98" height="58" rx="4"/><text x="431" y="124" text-anchor="middle">Spring Boot 4.1</text><text class="s" x="431" y="140" text-anchor="middle">API / 라이브톡</text>
-          <rect class="box" x="540" y="44" width="140" height="36" rx="4"/><text x="610" y="67" text-anchor="middle">RDS MySQL 8</text>
-          <rect class="box" x="540" y="94" width="140" height="36" rx="4"/><text x="610" y="117" text-anchor="middle">SES / 메일 발송</text>
-          <rect class="box" x="540" y="144" width="140" height="36" rx="4"/><text x="610" y="167" text-anchor="middle">S3 + CloudFront</text>
-          <path class="e" d="M88,64 L116,64"/>
-          <path class="e" d="M230,64 L270,64"/>
-          <path class="e" d="M321,82 L321,98"/>
-          <path class="e" d="M431,82 L431,98"/>
-          <path class="e" d="M480,112 C510,112 510,62 538,62"/>
-          <path class="e" d="M480,129 L538,112"/>
-          <path class="e" d="M480,146 C510,146 510,162 538,162"/>
-          <path class="ed" d="M44,84 L44,196 L610,196 L610,182"/><text class="s" x="140" y="190">이미지는 CloudFront에서 바로 받음</text>
-          <rect class="box" x="0" y="232" width="150" height="44" rx="4"/><text x="75" y="252" text-anchor="middle">GitHub Actions</text><text class="s" x="75" y="268" text-anchor="middle">빌드 / 테스트</text>
-          <rect class="new" x="196" y="232" width="150" height="44" rx="4"/><text x="271" y="252" text-anchor="middle">ECR</text><text class="s" x="271" y="268" text-anchor="middle">이미지 digest로 고정</text>
-          <rect class="new" x="392" y="232" width="150" height="44" rx="4"/><text x="467" y="252" text-anchor="middle">SSM</text><text class="s" x="467" y="268" text-anchor="middle">SSH 포트 없이 배포</text>
-          <path class="e" d="M150,254 L194,254"/><text class="s" x="172" y="226" text-anchor="middle">OIDC</text>
-          <path class="e" d="M346,254 L390,254"/>
-          <path class="e" d="M467,232 L467,178"/><text class="s" x="474" y="214">이미지 받아서 실행</text>
-        </svg>
-        <figcaption>EC2 한 대에서 Nginx, Next.js, Spring Boot를 Docker Compose로 운영합니다. 이미지 빌드는 GitHub Actions에서 합니다.</figcaption>
-      </figure>
-</div>
-</section><section id="cases"><h2>TECHNICAL CASES</h2><ol class="toc"><li><a href="#case-1">커서 페이지네이션과 복합 인덱스 기반 댓글 조회 성능 검증</a></li><li><a href="#case-2">원자적 UPDATE와 락 순서 통일 기반 추천 카운터 동시성 제어</a></li><li><a href="#case-3">Idempotency Key와 응답 스냅샷 기반 중복 요청 처리</a></li><li><a href="#case-4">Transactional Outbox와 SKIP LOCKED 기반 검색 색인 동기화</a></li><li><a href="#case-5">STOMP SimpleBroker 기반 실시간 채팅과 재연결 제어</a></li><li><a href="#case-6">OAuth 2.0 제공자와 사용자 ID 기반 계정 식별과 세션 보안</a></li><li><a href="#case-7">단기 토큰, Scope, 경로 Allowlist 기반 채팅 AI 접근 제어</a></li><li><a href="#case-8">ECR Digest, AWS OIDC와 SSM 기반 배포 및 롤백</a></li><li><a href="#case-9">RDS IAM 인증과 전용 계정 기반 DB 마이그레이션 권한 분리</a></li><li><a href="#case-10">행 잠금과 Lease 기반 S3 고아 객체 정리</a></li></ol></section>
-
 
 <section><h2>DATA CONSISTENCY &amp; QUERY</h2><div class="groups"><div class="group" id="case-1"><h4>1. 커서 페이지네이션과 복합 인덱스 기반 댓글 조회 성능 검증</h4><dl class="case"><dt>문제</dt><dd>댓글 전체를 읽어 메모리에서 트리로 조립해 응답 크기와 메모리가 댓글 수에 비례했고, 페이징도 없었습니다.</dd><dt>판단</dt><dd>전체 조립, 루트 커서+대댓글 일괄 조회, 루트 20건+대댓글 5건과 더보기 API를 브랜치로 구현해 분산 데이터와 쏠림 데이터에서 비교했습니다. 일괄 조회는 쏠림에서 103.70KB로 커져 제외했습니다. 2단계 답글에는 Recursive CTE와 Closure Table이 과하다고 보고 측정 전에 제외했습니다.</dd><dt>제약</dt><dd>분산 데이터에서는 비교안보다 느립니다(14.6ms 대 10.3ms). 별도 대댓글 API도 관리합니다. 100만 건 실험에서 LIMIT 전 JOIN과 정렬로 루트 20,000행을 읽는 병목(평균 36.6ms)을 찾았고, 개선안 3개는 문서로만 남겨 아직 미적용입니다.</dd><dt>검증</dt><dd class="res">쏠림 데이터에서 반환 행 1,000→25건, 응답 205.84→5.55KB, 실행 35.4→5.6ms (MySQL 8, 댓글 1,000건, 단일 실행 PoC). 별도 100만 건 합성 데이터의 복합 인덱스 비교에서는 읽은 행 200,001→2,000건, 평균 226.22→102.47ms, p95 241.63→115.88ms (워밍업 5회 후 20회, 쿼리 시간만).</dd></dl></div><div class="group" id="case-2"><h4>2. 원자적 UPDATE와 락 순서 통일 기반 추천 카운터 동시성 제어</h4><dl class="case"><dt>문제</dt><dd>100개 트랜잭션이 동시에 카운터 0을 읽도록 재현하자 추천은 100건인데 카운터는 1이었습니다. 토글 API는 재전송하면 반대 상태가 됐습니다.</dd><dt>판단</dt><dd>100스레드, 각 3회로 원자적 UPDATE, 낙관적 락, 비관적 락을 비교했습니다. 낙관적 락은 약 4,950회 재시도, 2.8~3.0초, 원자적 UPDATE는 436~467ms였습니다. 비관적 락과 시간은 비슷해 단순 증감에는 원자적 UPDATE를 택하고 API는 PUT/DELETE로 나눴습니다.</dd><dt>제약</dt><dd>같은 글의 쓰기는 row 락에서 직렬화됩니다. 중복 PUT은 증가 후 복구해 UPDATE가 두 번입니다. INSERT→UPDATE에서 FK 공유 락이 배타 락으로 승격되며 난 데드락은 모든 경로가 게시글 row를 먼저 잡도록 순서를 통일해 해결했습니다.</dd><dt>검증</dt><dd class="res">실제 테이블 통합 테스트에서 서로 다른 회원 100명, 동일 회원 100회, PUT/DELETE 혼합 등 7개 시나리오를 각 3회 실행해 오류 0건과 원본과 카운터 일치를 확인했습니다. 강제 실패 시 동시 롤백과 UNIQUE, CHECK 제약도 검증했습니다.</dd></dl></div><div class="group" id="case-3"><h4>3. Idempotency Key와 응답 스냅샷 기반 중복 요청 처리</h4><dl class="case"><dt>문제</dt><dd>커밋 후 응답 유실로 재요청하면 글이 중복 저장됩니다. 대상은 게시글, 댓글, 설질 제보, 카풀, 장터 5종입니다.</dd><dt>판단</dt><dd>공통 기록표에 첫 응답 JSON을 저장해 수정, 삭제 후에도 같은 응답을 돌려줍니다. 서비스 5곳을 개별 수정하는 대신 컨트롤러 TransactionTemplate에 합류시켰고, 키는 HMAC 해시로 저장합니다.</dd><dt>제약</dt><dd>키가 있는 카풀 등록은 외부 조회까지 같은 트랜잭션에 들어갑니다. 앞서 분리했던 호출을 재합류시킨 선택입니다. 시간당 10건 제한을 근거로 영향을 작게 판단했으나 커넥션 점유 시간은 미측정입니다.</dd><dt>검증</dt><dd class="res">통합 테스트 13건. 같은 키의 8스레드 요청이 모두 201로 응답하고 글과 기록은 각 1건이었습니다. 대댓글 재전송 검증 중 벌크 쿼리가 변경 감지를 무력화하는 버그도 찾아 수정했습니다.</dd></dl></div><div class="group"><h4>그 밖의 데이터 처리</h4><ul><li>외부 API: 카카오 길찾기 최대 2회와 오피넷 1회를 호출합니다. 헤더 없는 등록, 수정, 미리보기는 계산과 저장을 별도 빈으로 분리합니다. 운영 커넥션 풀은 10개입니다.</li><li>정렬: CSV 이관 후 ID와 작성 시각 순서가 달라진 오류를 작성 시각 정렬과 커서로 수정하고 운영 공개글 80건의 누락과 중복을 전수 확인했습니다.</li><li>테스트 DB: LATERAL, FK 락, CHECK 검증을 위해 H2를 제거하고 테스트와 CI를 MySQL로 통일했습니다.</li><li>식별자와 관계: 내부 BIGINT PK와 공개 UUID를 분리하고 권한은 별도로 검사합니다. 회원과 스키장 중계 엔티티에 복합 UNIQUE를 적용했습니다.</li></ul></div></div></section>
 
@@ -267,7 +215,7 @@ p.em a, .lk { color: var(--blue); }
 <section><h2>AI 활용 개발의 설계 판단과 검증 절차</h2>
 <p>Linear 티켓에 배경, 목표, 범위, 완료 조건을 정의하고 구현과 기록을 AI 에이전트에 맡깁니다. 무엇을 만들지와 어떤 방식을 택할지는 제가 결정하며, AI가 작성한 코드는 직접 검토하고 검증합니다.</p>
 <ul><li>대안 선택: 에이전트의 설계안 2~3개를 비교하고 요구사항에 맞지 않으면 요구사항을 조정해 다시 설계하게 합니다. 성능과 정합성 선택은 같은 조건의 측정 결과를 확인한 뒤 결정합니다.</li><li>검증과 리뷰: 결정 이유, 변경 범위, 테스트 결과를 확인하고, 리뷰 지적은 코드와 대조해 수정, 보류, 반박으로 나눕니다. 독립 작업은 worktree별 에이전트에 나눠 진행합니다.</li><li>작업 규칙: AGENTS.md를 입구로 프로젝트 규칙과 분야별 문서를 관리합니다. 작업에 필요한 문서만 참조하게 하고, 결과가 기준에서 벗어나면 규칙을 수정합니다.</li></ul></section>
-<section id="open-source"><h2>WAL 패턴 구현과 테스트 오픈소스 기여</h2>
+<section><h2>WAL 패턴 구현과 테스트 오픈소스 기여</h2>
 <div class="entry"><h3 class="et">iluwatar/java-design-patterns / WAL 모듈 기여</h3>
 <p class="em">2026.08 / 이슈 #3576 / <a href="https://github.com/iluwatar/java-design-patterns/pull/3582">PR #3582</a> 머지 / 12개 파일, 1,116줄 추가</p>
 <p>이슈에 담당 의사를 밝히고 Write-Ahead Log 패턴을 새 모듈로 구현해 메인테이너 승인을 받아 머지했습니다.</p>
