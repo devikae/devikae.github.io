@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>이주석 · 백엔드 엔지니어</title>
-<meta name="description" content="Java, Spring Boot 백엔드 엔지니어 이주석. SI 경력 3년, 개인 프로젝트 Snowthing을 기획부터 운영까지 직접 맡고 있습니다.">
+<title>이주석 | 백엔드 엔지니어</title>
+<meta name="description" content="Java, Spring Boot 백엔드 엔지니어 이주석의 이력서입니다. 개인 프로젝트 Snowthing을 기획부터 운영까지 직접 맡고 있습니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap">
@@ -150,123 +150,86 @@ footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8p
   #project { break-before: page; }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
+.tools { align-items: center; }
+.tabs { display: inline-flex; border: 1px solid var(--navy); border-radius: 7px; overflow: hidden; margin-right: auto; background: var(--paper); }
+.tabs a { font: 500 13px/1 var(--font); padding: 9px 16px; color: var(--navy); }
+.tabs a:hover { text-decoration: none; background: var(--tint); }
+.tabs a[aria-current="page"] { background: var(--navy); color: #fff; }
+h3.et { margin: 4px 0 0; font-size: 17px; font-weight: 700; }
+p.em { font-size: 13.5px; color: var(--ink-3); }
+p.em a, .lk { color: var(--blue); }
+.more { color: var(--blue); font-weight: 500; }
+.groups .group { scroll-margin-top: 16px; }
+.group p + p { margin-top: 6px; }
+@media print { .tabs { display: none !important; } }
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker></defs>
 </svg>
-
-<div class="tools">
-  <button type="button" class="act" id="savePdf">PDF로 저장</button>
-  <a class="act ghost" href="https://snowthing.org" target="_blank" rel="noopener">Snowthing 보기</a>
-  <a class="act ghost" href="https://github.com/devikae/snowthing" target="_blank" rel="noopener">GitHub 저장소</a>
-</div>
-
+<div class="tools"><nav class="tabs" aria-label="페이지"><a href="index.html" aria-current="page">이력서</a><a href="career.html">기술경력</a></nav><button type="button" class="act" id="savePdf">PDF로 저장</button><a class="act ghost" href="https://snowthing.org" target="_blank" rel="noopener">Snowthing 보기</a><a class="act ghost" href="https://github.com/devikae/snowthing" target="_blank" rel="noopener">GitHub 저장소</a></div>
 <main class="paper">
-  <header class="head">
-    <div class="name">
-      <h1>이주석</h1>
-      <div class="role">백엔드 엔지니어 / Java, Spring Boot / SI 경력 3년</div>
-    </div>
+<header class="head">
+    <div class="name"><h1>이주석</h1><div class="role">백엔드 엔지니어 | Java, Spring Boot | 경력 3년</div></div>
     <dl>
       <dt>메일</dt><dd><span id="mail">sseok2020@naver.com</span><button type="button" id="copyMail">복사</button></dd>
       <dt>GitHub</dt><dd><a href="https://github.com/devikae" target="_blank" rel="noopener">github.com/devikae</a></dd>
       <dt>Blog</dt><dd><a href="https://velog.io/@tinwo" target="_blank" rel="noopener">velog.io/@tinwo</a></dd>
     </dl>
   </header>
-
-  <section>
-    <h2>SUMMARY</h2>
-    <p>Java와 Spring 기반의 SI 현장에서 약 3년간 기능 개발과 유지보수, 운영 장애 대응을 맡았습니다. 기존 코드를 분석하고 문제를 해결하며 경험을 쌓았고, 점차 “동작하게 만드는 것”을 넘어 “왜 이 방식으로 해결했는가”를 설명하는 개발자가 되고자 했습니다.</p>
-    <p>이를 위해 기본기를 다시 공부하고, 개인 프로젝트 Snowthing을 기획부터 개발, 배포와 운영까지 직접 진행했습니다. 여러 구현을 비교하고 결과를 검증하면서 모든 기술에는 장점과 함께 감수해야 할 비용이 있다는 점을 배웠습니다. “은탄환은 없다”는 생각을 바탕으로, 유행이나 익숙함보다 요구사항과 시스템의 제약에 맞는 선택을 중요하게 생각합니다. 부족한 부분은 공부와 실험으로 채우며, 선택의 근거와 결과를 설명할 수 있는 엔지니어로 성장하고 있습니다.</p>
-  </section>
-
-  <section>
-    <h2>GROWTH</h2>
-    <ol class="growth">
-      <li><span class="g-when">2023</span><b>SI 실무 시작</b><span>공공기관 행정 시스템 유지보수와 장애 대응</span></li>
-      <li><span class="g-when">재직 중</span><b>기초 다지기</b><span>컴퓨터공학 학사(2024.04), 정보처리기사, SQLD, 리눅스마스터 2급</span></li>
-      <li><span class="g-when">2025</span><b>SI 기능 고도화</b><span>조회 API 재설계와 화면 및 데이터 연동 개선</span></li>
-      <li><span class="g-when">2026</span><b>직접 설계하고 검증</b><span>Snowthing 1인 개발 및 운영, 오픈소스 PR 머지</span></li>
-    </ol>
-  </section>
-
-  <section>
-    <h2>HOW I WORK</h2>
-    <p>유지보수에서는 수정할 코드뿐 아니라 연결된 화면과 데이터, 기존 업무 흐름까지 함께 확인했습니다. 개인 프로젝트에서도 문제를 나누고, 구현부터 검증과 운영까지 이어가는 방식으로 개발하고 있습니다.</p>
-    <ul>
-      <li>기존 시스템 파악: 요청 흐름과 데이터 관계를 먼저 읽고, 로그와 실행 결과를 바탕으로 문제의 원인과 변경 범위를 좁힙니다.</li>
-      <li>대안 비교와 검증: 성능과 정합성, 구현 및 운영 비용을 함께 비교합니다. 선택이 필요한 부분은 같은 조건에서 실험하고 판단 근거를 기록합니다.</li>
-      <li>변경 후 확인: 코드 검토와 테스트에 더해 실제 배포 후 동작과 복구 경로를 확인합니다. AI가 작성한 코드도 같은 기준으로 검토하고 검증합니다.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>EXPERIENCE</h2>
-    <div class="entry">
-      <div class="entry-head"><h3>피플앤드테크놀러지<span>SI 백엔드 개발</span></h3><span class="when">2025.08 ~ 2026.04</span></div>
-      <p class="domain">SI 프로젝트의 백엔드 API 개발, 기능 개선 및 유지보수를 맡았습니다.</p>
-      <ul>
-        <li>3D 및 지도 대시보드 연동에 맞춰 Spring 조회 API를 재설계하고 중복 호출과 쿼리 병목을 개선했습니다.</li>
-        <li>사용자 조작 중 화면과 데이터 상태가 어긋나는 오류 및 운영 런타임 예외를 추적해 해결했습니다.</li>
-        <li>Three.js와 지도 API 기반 대시보드의 위치 데이터 표시를 개선하고 현업 요청 기능을 개발했습니다.</li>
-      </ul>
-    </div>
-    <div class="entry">
-      <div class="entry-head"><h3>세이소프트<span>SI 백엔드 개발</span></h3><span class="when">2023.03 ~ 2025.08</span></div>
-      <p class="domain">공공기관(B2G) 행정 시스템, 정책 포털, 성과관리와 모바일 커뮤니티의 SI 개발 및 유지보수를 맡았습니다.</p>
-      <ul>
-        <li>운영 장애를 서버 로그와 디버깅으로 분석하고 핫픽스를 배포해 다른 기능으로 번지는 영향을 줄였습니다.</li>
-        <li>레거시 데이터 처리 로직을 리팩토링하고 Java 기반 RESTful API 연동 구조를 구축했습니다.</li>
-      </ul>
-    </div>
-  </section>
-
-  <div class="two">
-    <section>
-      <h2>SKILLS</h2>
-      <dl class="kv">
-        <dt>Backend</dt><dd>Java 21, Spring Boot, Spring Security, JPA(Hibernate)</dd>
-        <dt>Database</dt><dd>MySQL 8, Redis</dd>
-        <dt>Infra</dt><dd>AWS(EC2, ECR, RDS, SSM), Docker, GitHub Actions, Pinpoint</dd>
-        <dt>Etc</dt><dd>Next.js, TypeScript, Git, Agile 스프린트</dd>
-      </dl>
-    </section>
-    <section>
-      <h2>EDUCATION</h2>
-      <dl class="kv">
-        <dt>2024.04</dt><dd>학점은행제 컴퓨터공학 학사</dd>
-        <dt>자격증</dt><dd>정보처리기사, SQLD, 리눅스마스터 2급</dd>
-      </dl>
-    </section>
-  </div>
-
-  <section id="project">
-    <h2>TECHNICAL EXPERIENCE</h2>
-    <div class="entry">
-      <div class="entry-head"><h3><a href="https://snowthing.org" target="_blank" rel="noopener">Snowthing</a><span>겨울 스포츠 커뮤니티 / 개인 프로젝트</span></h3><span class="when">2026.07 ~ 진행 중</span></div>
-      <p class="domain">게시판, 중고장터, 카풀, 실시간 라이브톡이 있는 커뮤니티입니다. 기획부터 설계, 개발, 배포까지 혼자 맡아 AWS에서 운영하고 있습니다.</p>
-      <dl class="meta">
-        <dt>링크</dt><dd><a href="https://github.com/devikae/snowthing" target="_blank" rel="noopener">github.com/devikae/snowthing</a> / README에 설계와 검증 기록</dd>
-        <dt>기술스택</dt><dd>Java 21 / Spring Boot / Spring Security / JPA / MySQL 8 / Redis / Next.js / AWS / GitHub Actions</dd>
-      </dl>
-      <div class="shots">
-        <figure><img src="assets/home.jpg" alt="Snowthing 메인 화면. 게시판 목록, 라이브톡, 오늘의 설질" width="800" height="506" loading="lazy"><figcaption>메인 화면 · 게시판, 라이브톡, 오늘의 설질</figcaption></figure>
+<section><h2>SUMMARY</h2>
+<p>Java와 Spring 기반의 SI 현장에서 약 3년간 기능 개발과 유지보수, 운영 장애 대응을 맡았습니다. 기존 코드를 분석하고 문제를 해결하며 경험을 쌓았고, 점차 “동작하게 만드는 것”을 넘어 “왜 이 방식으로 해결했는가”를 설명하는 개발자가 되고자 했습니다.</p>
+<p>이를 위해 기본기를 다시 공부하고, 개인 프로젝트 Snowthing을 기획부터 개발, 배포와 운영까지 직접 진행했습니다. 여러 구현을 비교하고 결과를 검증하면서 모든 기술에는 장점과 함께 감수해야 할 비용이 있다는 점을 배웠습니다. “은탄환은 없다”는 생각을 바탕으로, 유행이나 익숙함보다 요구사항과 시스템의 제약에 맞는 선택을 중요하게 생각합니다. 부족한 부분은 공부와 실험으로 채우며, 선택의 근거와 결과를 설명할 수 있는 엔지니어로 성장하고 있습니다.</p>
+</section>
+<section><h2>GROWTH</h2><ol class="growth">
+<li><span class="g-when">2023</span><b>SI 실무 시작</b><span>공공기관 행정 시스템 유지보수와 장애 대응</span></li>
+<li><span class="g-when">재직 중</span><b>기초 다지기</b><span>컴퓨터공학 학사(2024.04), 정보처리기사, SQLD, 리눅스마스터 2급</span></li>
+<li><span class="g-when">2025</span><b>SI 기능 고도화</b><span>지도 대시보드 표시와 화면 및 데이터 연동 개선</span></li>
+<li><span class="g-when">2026</span><b>직접 설계하고 검증</b><span>Snowthing 1인 개발 및 운영, 오픈소스 PR 머지</span></li>
+</ol></section>
+<section><h2>EXPERIENCE</h2>
+<div class="entry"><div class="entry-head"><h3>피플앤드테크놀러지<span>SI 백엔드 개발</span></h3><span class="when">2025.08 ~ 2026.04</span></div>
+<ul><li>백엔드 API 개발, 기능 개선, 유지보수를 맡았습니다. 사용자 조작 중 화면과 데이터 상태가 어긋나는 오류와 운영 런타임 예외를 추적해 해결했습니다.</li>
+<li>Highcharts 지도 대시보드의 지역별 데이터 표시를 개선하고 현업 요청 기능을 개발했습니다.</li></ul></div>
+<div class="entry"><div class="entry-head"><h3>세이소프트<span>SI 백엔드 개발</span></h3><span class="when">2023.03 ~ 2025.08</span></div>
+<ul><li>공공기관 행정 시스템, 정책 포털, 성과관리, 모바일 커뮤니티의 개발과 유지보수를 맡았습니다.</li>
+<li>서버 로그와 디버깅으로 운영 장애를 분석하고 핫픽스를 배포했습니다. 레거시 데이터 처리 로직을 리팩토링하고 Java 기반 RESTful API 연동 구조를 구축했습니다.</li></ul></div>
+</section>
+<div class="two">
+<section><h2>TECH STACK</h2>
+<dl class="kv"><dt>Language</dt><dd>Java 21, TypeScript</dd>
+<dt>Backend</dt><dd>Spring Boot 4.1, Spring Security, Spring Data JPA, Querydsl, Spring WebSocket(STOMP)</dd>
+<dt>Database</dt><dd>MySQL 8</dd><dt>Frontend</dt><dd>Next.js 16, React 19</dd>
+<dt>Infra</dt><dd>AWS EC2, RDS, S3, CloudFront, ECR, SES, SSM, SNS, Lambda, Docker Compose, Nginx</dd>
+<dt>CI/CD</dt><dd>GitHub Actions, AWS OIDC</dd><dt>관측</dt><dd>Pinpoint, CloudWatch, Discord 알림</dd>
+<dt>Test</dt><dd>JUnit 5, Mockito, Spring Boot Test</dd></dl>
+</section>
+<section><h2>EDUCATION</h2><dl class="kv"><dt>2024.04</dt><dd>학점은행제 컴퓨터공학 학사</dd><dt>자격증</dt><dd>정보처리기사, SQLD, 리눅스마스터 2급</dd></dl></section>
+</div>
+<section id="project"><h2>PROJECT</h2>
+<div class="entry">
+<div class="entry-head"><h3><a href="https://snowthing.org" target="_blank" rel="noopener">Snowthing</a><span>겨울 스포츠 커뮤니티 / 개인 프로젝트 / 1인 개발</span></h3><span class="when">2026.07 ~ 진행 중</span></div>
+<p class="domain">게시판, 중고장터, 카풀, 실시간 라이브톡, 슬로프캠을 제공합니다. 기획, 설계, 화면, API, DB, 배포, 운영을 맡았습니다.</p>
+<dl class="meta"><dt>링크</dt><dd><a href="https://github.com/devikae/snowthing" target="_blank" rel="noopener">github.com/devikae/snowthing</a> / 저장소 docs에 ADR과 벤치마크 기록</dd>
+<dt>규모</dt><dd>커밋 328건, 병합 PR 52건, 백엔드 테스트 700건 이상, 운영 마이그레이션 32개 (2026-11 기준)</dd></dl>
+<div class="shots">
+        <figure><img src="assets/home.jpg" alt="Snowthing 메인 화면. 게시판 목록, 라이브톡, 오늘의 설질" width="800" height="506" loading="lazy"><figcaption>메인 화면 / 게시판, 라이브톡, 오늘의 설질</figcaption></figure>
         <figure><img src="assets/resort-cam.jpg" alt="스키장 웹캠 화면" width="800" height="506" loading="lazy"><figcaption>슬로프 웹캠</figcaption></figure>
-        <figure><img src="assets/login.jpg" alt="로그인 화면. 이메일 로그인과 네이버, Google 간편 로그인" width="800" height="506" loading="lazy"><figcaption>로그인 · 이메일, 네이버, Google</figcaption></figure>
+        <figure><img src="assets/login.jpg" alt="로그인 화면. 이메일 로그인과 네이버, Google 간편 로그인" width="800" height="506" loading="lazy"><figcaption>로그인 / 이메일, 네이버, Google</figcaption></figure>
       </div>
-      <figure class="diagram">
+<figure class="diagram">
         <svg class="dg" viewBox="0 0 680 290" role="img" aria-label="Snowthing 운영 구조: 사용자가 Cloudflare를 거쳐 EC2의 Nginx로 들어오고, Next.js와 Spring Boot가 RDS, SES, S3와 연결된다. 배포는 GitHub Actions가 ECR에 이미지를 올리고 SSM이 EC2에서 실행한다.">
           <text class="h" x="0" y="14">운영 구조</text>
           <rect class="box" x="0" y="44" width="88" height="40" rx="4"/><text x="44" y="68" text-anchor="middle">사용자</text>
-          <rect class="box" x="118" y="44" width="112" height="40" rx="4"/><text x="174" y="62" text-anchor="middle">Cloudflare</text><text class="s" x="174" y="77" text-anchor="middle">DNS · TLS</text>
-          <rect class="grp" x="258" y="26" width="236" height="150" rx="6"/><text class="gt" x="270" y="42">EC2 · Docker Compose</text>
+          <rect class="box" x="118" y="44" width="112" height="40" rx="4"/><text x="174" y="62" text-anchor="middle">Cloudflare</text><text class="s" x="174" y="77" text-anchor="middle">DNS / TLS</text>
+          <rect class="grp" x="258" y="26" width="236" height="150" rx="6"/><text class="gt" x="270" y="42">EC2 / Docker Compose</text>
           <rect class="box" x="272" y="52" width="208" height="30" rx="4"/><text x="376" y="72" text-anchor="middle">Nginx</text>
           <rect class="box" x="272" y="100" width="98" height="58" rx="4"/><text x="321" y="124" text-anchor="middle">Next.js 16</text><text class="s" x="321" y="140" text-anchor="middle">화면</text>
-          <rect class="new" x="382" y="100" width="98" height="58" rx="4"/><text x="431" y="124" text-anchor="middle">Spring Boot 4.1</text><text class="s" x="431" y="140" text-anchor="middle">API · 라이브톡</text>
-          <rect class="box" x="540" y="44" width="140" height="36" rx="4"/><text x="610" y="67" text-anchor="middle">RDS MySQL 8.0</text>
-          <rect class="box" x="540" y="94" width="140" height="36" rx="4"/><text x="610" y="117" text-anchor="middle">SES · 메일 발송</text>
+          <rect class="new" x="382" y="100" width="98" height="58" rx="4"/><text x="431" y="124" text-anchor="middle">Spring Boot 4.1</text><text class="s" x="431" y="140" text-anchor="middle">API / 라이브톡</text>
+          <rect class="box" x="540" y="44" width="140" height="36" rx="4"/><text x="610" y="67" text-anchor="middle">RDS MySQL 8</text>
+          <rect class="box" x="540" y="94" width="140" height="36" rx="4"/><text x="610" y="117" text-anchor="middle">SES / 메일 발송</text>
           <rect class="box" x="540" y="144" width="140" height="36" rx="4"/><text x="610" y="167" text-anchor="middle">S3 + CloudFront</text>
           <path class="e" d="M88,64 L116,64"/>
           <path class="e" d="M230,64 L270,64"/>
@@ -276,7 +239,7 @@ footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8p
           <path class="e" d="M480,129 L538,112"/>
           <path class="e" d="M480,146 C510,146 510,162 538,162"/>
           <path class="ed" d="M44,84 L44,196 L610,196 L610,182"/><text class="s" x="140" y="190">이미지는 CloudFront에서 바로 받음</text>
-          <rect class="box" x="0" y="232" width="150" height="44" rx="4"/><text x="75" y="252" text-anchor="middle">GitHub Actions</text><text class="s" x="75" y="268" text-anchor="middle">빌드 · 테스트</text>
+          <rect class="box" x="0" y="232" width="150" height="44" rx="4"/><text x="75" y="252" text-anchor="middle">GitHub Actions</text><text class="s" x="75" y="268" text-anchor="middle">빌드 / 테스트</text>
           <rect class="new" x="196" y="232" width="150" height="44" rx="4"/><text x="271" y="252" text-anchor="middle">ECR</text><text class="s" x="271" y="268" text-anchor="middle">이미지 digest로 고정</text>
           <rect class="new" x="392" y="232" width="150" height="44" rx="4"/><text x="467" y="252" text-anchor="middle">SSM</text><text class="s" x="467" y="268" text-anchor="middle">SSH 포트 없이 배포</text>
           <path class="e" d="M150,254 L194,254"/><text class="s" x="172" y="226" text-anchor="middle">OIDC</text>
@@ -285,63 +248,17 @@ footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8p
         </svg>
         <figcaption>EC2 한 대에서 Nginx, Next.js, Spring Boot를 Docker Compose로 운영합니다. 이미지 빌드는 GitHub Actions에서 합니다.</figcaption>
       </figure>
-    </div>
-
-    <div class="groups">
-      <div class="group">
-        <h4>대표 사례: 댓글 조회 구조를 세 가지로 측정해 고르기</h4>
-        <dl class="case">
-          <dt>문제</dt><dd>글 하나의 댓글을 모두 읽어 메모리에서 트리를 조립하는 구조였습니다. 댓글이 늘면 응답 크기와 메모리 사용량이 함께 커졌고 페이징도 적용할 수 없었습니다.</dd>
-          <dt>판단</dt><dd>세 가지 구조를 각각 브랜치로 만들어 같은 조건(MySQL 8, 댓글 1,000건, 분산 데이터와 핫스팟 데이터)에서 측정했습니다. 대댓글을 한 번에 읽는 방식은 대댓글이 몰린 글에서 응답이 103.70KB로 다시 커져 제외했습니다. 루트 댓글 20건과 루트별 대댓글 5건만 먼저 보내고 나머지는 더보기 API로 나누는 방식을 택했습니다.</dd>
-          <dt>감수</dt><dd>분산 데이터에서는 제외한 방식보다 조금 느립니다<span class="paren">(14.6ms 대 10.3ms)</span>. 대신 응답 크기가 절반 가까이 작고<span class="paren">(22.03KB 대 39.87KB)</span>, 대댓글 전용 API를 하나 더 관리합니다.</dd>
-          <dt>결과</dt><dd class="res">대댓글이 몰린 글에서 읽은 행이 1,000건에서 25건으로, 응답 크기가 205.84KB에서 5.55KB로, 실행 시간이 35.4ms에서 5.6ms로 줄었습니다. 별도 실험에서는 100만 건 합성 데이터에 복합 인덱스를 적용해 읽은 행을 200,001건에서 2,000건으로 줄였습니다.</dd>
-        </dl>
-      </div>
-      <div class="group">
-        <h4>데이터 정합성</h4>
-        <ul>
-          <li>추천 수 갱신 방식으로 낙관적 락, 비관적 락, 원자적 UPDATE를 비교하고 단순 증감에는 원자적 UPDATE를 택했습니다. 추천을 PUT/DELETE로 정의해 같은 요청이 재시도되어도 한 번만 반영되게 했습니다. <span class="paren">(동시 요청 100건, 같은 회원 100회 반복, 추천과 취소 혼합 조건을 각 3회 실행해 모두 일치)</span></li>
-          <li>목록에서 매번 COUNT, GROUP BY로 세던 댓글 수와 추천 수를 컬럼으로 옮기고 원본과 같은 트랜잭션에서 갱신했습니다. 값이 어긋날 때를 대비해 CHECK 제약과 관리자 보정 경로를 두었습니다.</li>
-          <li>내부 조인에는 BIGINT PK를 쓰고 API에는 UUID만 노출했습니다. 회원과 스키장의 관계는 중계 엔티티로 분리하고 복합 UNIQUE 제약으로 중복 저장을 막았습니다.</li>
-        </ul>
-      </div>
-      <div class="group">
-        <h4>외부 연동과 권한</h4>
-        <ul>
-          <li>카카오 경로 API와 유가 정보 API 호출을 DB 트랜잭션 밖으로 옮겼습니다. 외부 응답 대기와 내부 저장을 분리하고, 외부 호출 실패 시 일부 데이터만 저장되지 않는지 검증했습니다.</li>
-          <li>외부 호출이 모두 실패하면 허용 범위를 통과한 사용자 입력만 저장하고 값의 출처와 계산 시점을 함께 기록했습니다.</li>
-          <li>Google, Naver OAuth 2.0 로그인을 기존 회원 연결과 신규 가입 흐름에 통합했습니다. 일회성 state와 로그인 시 세션 ID 교체를 적용했습니다. <span class="paren">(테스트 22건)</span></li>
-          <li>공개 채팅방에 답하는 AI(MCP)에는 회원과 원본 채팅에 묶인 60초 읽기 전용 토큰만 발급했습니다. 관리자가 호출해도 일반 사용자 권한으로 제한됩니다. <span class="paren">(거부 시나리오 테스트 13건)</span></li>
-        </ul>
-      </div>
-      <div class="group">
-        <h4>배포와 운영</h4>
-        <ul>
-          <li>운영 EC2에서 하던 이미지 빌드를 GitHub Actions로 옮기고 ECR 이미지 digest로 배포 대상을 고정했습니다. AWS OIDC와 SSM으로 SSH 포트와 PEM 키 없이 배포했습니다. 직전 버전 복구 뒤 외부 응답과 재배포를 확인했으며, 측정한 SSM 롤백 구간은 19초입니다.</li>
-          <li>라이브톡은 Spring SimpleBroker와 최근 30건의 인메모리 버퍼로 RDB와 분리했습니다. 로컬에서 200명이 5회씩 보내는 부하 테스트를 실행해 수신 200,000건, 누락 0건, 수신 p95 951ms를 확인했습니다.</li>
-          <li>Pinpoint를 별도 EC2에 10% 샘플링으로 연결해, DB 장애 때 커넥션 획득을 30초 기다리는 구간을 요청 단위로 확인했습니다.</li>
-          <li>AI가 작성한 코드 초안은 설계 문서와 계층 규칙에 맞는지 검토하고 테스트와 실제 배포로 확인한 뒤 반영했습니다.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>OPEN SOURCE</h2>
-    <div class="entry">
-      <div class="entry-head"><h3>iluwatar/java-design-patterns<span>기여자</span></h3><span class="when">2026.08</span></div>
-      <ul>
-        <li>Write-Ahead Log(WAL) 패턴 모듈을 구현하고 공개 리뷰를 반영해 테스트와 문서를 보완한 뒤 PR이 머지됐습니다. <a href="https://github.com/iluwatar/java-design-patterns/pull/3582" target="_blank" rel="noopener" style="color:var(--blue)">PR #3582</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <footer><span>이주석 · sseok2020@naver.com</span><span>최종 수정 2026-11-04</span></footer>
+</div>
+<div class="group"><h4>주요 사례</h4><ul><li>댓글 조회 구조: 세 가지 구조를 구현해 비교하고, 쏠림 데이터의 응답을 205.84KB에서 5.55KB로 줄였습니다. <a class="more" href="career.html#case-1">자세히</a></li><li>추천 동시성: 카운터 불일치를 재현한 뒤 락 방식 3개를 비교했고, 7개 시나리오를 각 3회 실행해 일치를 확인했습니다. <a class="more" href="career.html#case-2">자세히</a></li><li>중복 요청 처리: 멱등 키와 응답 스냅샷으로 같은 키 8스레드 요청에서 글과 기록을 각 1건으로 유지했습니다. <a class="more" href="career.html#case-3">자세히</a></li><li>검색 색인 동기화: Transactional Outbox로 중복, 역순, 처리 중 종료를 통합 테스트 11건으로 검증했습니다. <a class="more" href="career.html#case-4">자세히</a></li><li>실시간 채팅: EC2 한 대에 맞춰 STOMP SimpleBroker를 고르고 재연결과 로컬 부하를 측정했습니다. <a class="more" href="career.html#case-5">자세히</a></li><li>배포와 롤백: ECR digest와 OIDC, SSM으로 배포를 고정하고 실제 롤백을 Actions 기록으로 확인했습니다. <a class="more" href="career.html#case-8">자세히</a></li></ul><p><a class="more" href="career.html">기술경력 전체 보기</a></p></div>
+</section>
+<section><h2>OPEN SOURCE</h2><div class="entry"><div class="entry-head"><h3>iluwatar/java-design-patterns<span>WAL 모듈 기여</span></h3><span class="when">2026.08</span></div>
+<ul><li>Write-Ahead Log 패턴 모듈과 단위 테스트 13건, README를 작성해 메인테이너 승인을 받아 머지했습니다. <a class="lk" href="https://github.com/iluwatar/java-design-patterns/pull/3582" target="_blank" rel="noopener">PR #3582</a> <a class="more" href="career.html#open-source">자세히</a></li></ul></div></section>
+<footer><span>이주석 / sseok2020@naver.com</span><span>최종 수정 2026-11-06</span></footer>
 </main>
-
 <script>
   document.getElementById('savePdf').addEventListener('click', () => window.print());
-  document.getElementById('copyMail').addEventListener('click', e => {
+  const copy = document.getElementById('copyMail');
+  if (copy) copy.addEventListener('click', e => {
     const t = document.getElementById('mail').textContent;
     try { navigator.clipboard.writeText(t).then(() => { e.target.textContent = '복사됨'; setTimeout(() => e.target.textContent = '복사', 1500); }, () => {}); } catch {}
   });
