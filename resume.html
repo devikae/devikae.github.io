@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>이주석 이력서 | 백엔드 엔지니어</title>
+<meta name="description" content="Java, Spring Boot 백엔드 엔지니어 이주석의 이력서입니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap">
+<style>
+/* Layout: the 공용 이력서 as one continuous web page. Same navy rules, same sections; screenshots and the 운영 구조 diagram added to the project. */
+:root {
+  --ground: #e6eaf2;
+  --paper: #ffffff;
+  --ink: #1b2233;
+  --ink-2: #4a5266;
+  --ink-3: #868da0;
+  --line: #dde1e9;
+  --navy: #1a2744;
+  --tint: #f5f7fa;
+  --blue: #2f55c8;
+  --font: Roboto, "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --ground: #0c111e; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --ground: #0c111e; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--ground); color: var(--ink);
+  font: 400 15px/1.75 var(--font);
+  word-break: keep-all; overflow-wrap: anywhere;
+  -webkit-font-smoothing: antialiased;
+  padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: inherit; text-decoration: none; }
+a:hover, a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+p { margin: 0; }
+ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+li::marker { color: var(--ink-3); }
+.paren { color: var(--ink-2); }
+
+.tools { max-width: 880px; margin: 0 auto 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+.act { font: 500 13px/1 var(--font); border: 1px solid var(--navy); background: var(--navy); color: #fff; border-radius: 7px; padding: 9px 14px; cursor: pointer; text-decoration: none; }
+.act.ghost { background: var(--paper); color: var(--navy); }
+.act:hover { text-decoration: none; opacity: .9; }
+
+.paper {
+  max-width: 880px; margin: 0 auto; background: var(--paper);
+  padding: 56px 64px 40px;
+  box-shadow: 0 1px 2px rgba(16, 24, 48, .08), 0 14px 40px rgba(16, 24, 48, .10);
+  display: grid; gap: 40px;
+}
+
+.head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: center; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.head .name { display: grid; gap: 6px; padding-left: 16px; border-left: 3px solid var(--navy); }
+.head h1 { margin: 0; font-size: 34px; line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; }
+.head .role { font-size: 14px; color: var(--ink-2); }
+.head dl { margin: 0; display: grid; grid-template-columns: auto auto; gap: 2px 14px; font-size: 13px; }
+.head dt { color: var(--ink-3); }
+.head dd { margin: 0; }
+.head button { font: inherit; font-size: 12px; color: var(--ink-3); background: none; border: 0; padding: 0 0 0 6px; cursor: pointer; }
+.head button:hover { color: var(--blue); }
+
+section { display: grid; gap: 12px; }
+section > h2 { margin: 0; font-size: 14px; font-weight: 700; color: var(--navy); letter-spacing: 0.06em; padding-bottom: 6px; border-bottom: 1px solid var(--navy); }
+section > p + p { margin-top: 4px; }
+
+ol.growth { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+ol.growth li { display: grid; gap: 2px; align-content: start; padding: 2px 14px 0; border-left: 1px solid var(--line); font-size: 13.5px; line-height: 1.55; color: var(--ink-2); }
+ol.growth li:first-child { padding-left: 0; border-left: 0; }
+ol.growth .g-when { font-size: 12.5px; color: var(--ink-3); }
+ol.growth b { font-size: 15px; color: var(--navy); font-weight: 700; }
+
+.entry { display: grid; gap: 6px; }
+.entry + .entry { margin-top: 14px; }
+.entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.entry-head h3 { margin: 0; font-size: 17px; font-weight: 700; }
+.entry-head h3 span { font-size: 14px; font-weight: 400; color: var(--ink-2); margin-left: 8px; }
+.when { font-size: 13.5px; color: var(--ink-3); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.domain { color: var(--ink-2); }
+.meta { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 2px 12px; color: var(--ink-2); font-size: 14px; margin: 0; }
+.meta dt { color: var(--ink-3); }
+.meta dd { margin: 0; }
+.meta a { color: var(--blue); }
+
+.two { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+.kv { display: grid; grid-template-columns: 80px minmax(0, 1fr); gap: 4px 12px; margin: 0; font-size: 14.5px; }
+.kv dt { color: var(--ink-3); }
+.kv dd { margin: 0; }
+
+.shots { display: grid; grid-template-columns: 2fr 1fr; gap: 10px; margin: 8px 0 0; }
+.shots figure { margin: 0; }
+.shots figure:first-child { grid-row: span 2; }
+.shots img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 4px; }
+figcaption { margin-top: 6px; font-size: 12.5px; line-height: 1.5; color: var(--ink-3); }
+
+.diagram { margin: 8px 0 0; padding: 16px; background: var(--tint); border-radius: 4px; overflow-x: auto; }
+.diagram svg { display: block; width: 100%; min-width: 560px; height: auto; }
+.dg text { font-family: var(--font); fill: var(--ink); font-size: 12px; }
+.dg .s { fill: var(--ink-2); font-size: 11px; }
+.dg .h { font-size: 13px; font-weight: 700; fill: var(--navy); }
+.dg .gt { fill: var(--ink-3); font-size: 11px; font-weight: 600; }
+.dg .box { fill: var(--paper); stroke: #c9d0de; stroke-width: 1; }
+.dg .new { fill: #e8edf8; stroke: var(--navy); stroke-width: 1.2; }
+.dg .grp { fill: none; stroke: var(--ink-3); stroke-dasharray: 4 4; }
+.dg .e { stroke: var(--ink-3); stroke-width: 1.3; fill: none; marker-end: url(#arrow); }
+.dg .ed { stroke: var(--ink-3); stroke-width: 1.3; fill: none; stroke-dasharray: 5 4; marker-end: url(#arrow); }
+#arrow path { fill: var(--ink-3); }
+
+.group { display: grid; gap: 6px; }
+.group h4 { margin: 0; font-size: 15.5px; font-weight: 700; color: var(--navy); }
+.groups { display: grid; gap: 22px; margin-top: 8px; }
+dl.case { margin: 4px 0 0; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 6px 14px; padding: 16px 18px; background: var(--tint); border-radius: 4px; }
+dl.case dt { font-size: 13.5px; font-weight: 600; color: var(--ink-3); padding-top: 1px; }
+dl.case dd { margin: 0; }
+dl.case dd.res { font-weight: 600; color: var(--navy); }
+
+footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--ink-3); }
+
+@media (max-width: 760px) {
+  body { padding-block: 16px 40px; }
+  .paper { padding: 28px 20px 24px; gap: 32px; }
+  .head { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .head h1 { font-size: 28px; }
+  .two { grid-template-columns: minmax(0, 1fr); }
+  ol.growth { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 14px; }
+  ol.growth li:nth-child(3) { padding-left: 0; border-left: 0; }
+  .shots { grid-template-columns: 1fr; }
+  .shots figure:first-child { grid-row: auto; }
+  dl.case { grid-template-columns: minmax(0, 1fr); gap: 2px; padding: 14px; }
+  dl.case dd + dt { margin-top: 8px; }
+}
+
+@page { size: A4; margin: 12mm 13mm; }
+@media print {
+  body { background: #fff; padding: 0; font-size: 10pt; line-height: 1.6; }
+  .tools, .head button { display: none !important; }
+  .paper { box-shadow: none; padding: 0; max-width: none; gap: 18px; }
+  .shots { grid-template-columns: repeat(3, 1fr); }
+  .shots figure:first-child { grid-row: auto; }
+  .diagram svg { min-width: 0; }
+  .group, .diagram, .shots { break-inside: avoid; }
+  #project { break-before: page; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+.tools { align-items: center; }
+.tabs { display: inline-flex; border: 1px solid var(--navy); border-radius: 7px; overflow: hidden; margin-right: auto; background: var(--paper); }
+.tabs a { font: 500 13px/1 var(--font); padding: 9px 16px; color: var(--navy); }
+.tabs a:hover { text-decoration: none; background: var(--tint); }
+.tabs a[aria-current="page"] { background: var(--navy); color: #fff; }
+h3.et { margin: 4px 0 0; font-size: 17px; font-weight: 700; }
+p.em { font-size: 13.5px; color: var(--ink-3); }
+p.em a, .lk { color: var(--blue); }
+.more { color: var(--blue); font-weight: 500; }
+.groups .group { scroll-margin-top: 16px; }
+.group p + p { margin-top: 6px; }
+@media print { .tabs { display: none !important; } }
+.act { display: inline-block; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z"/></marker></defs>
+</svg>
+<div class="tools"><nav class="tabs" aria-label="페이지"><a href="resume.html" aria-current="page">이력서</a><a href="./">기술경력</a></nav><button type="button" class="act" id="savePdf">PDF로 저장</button><a class="act ghost" href="https://snowthing.org" target="_blank" rel="noopener">Snowthing 보기</a><a class="act ghost" href="https://github.com/devikae/snowthing" target="_blank" rel="noopener">GitHub 저장소</a></div>
+<main class="paper">
+<header class="head">
+    <div class="name"><h1>이주석</h1><div class="role">백엔드 엔지니어 | Java, Spring Boot | 경력 3년</div></div>
+    <dl>
+      <dt>메일</dt><dd><span id="mail">sseok2020@naver.com</span><button type="button" id="copyMail">복사</button></dd>
+      <dt>GitHub</dt><dd><a href="https://github.com/devikae" target="_blank" rel="noopener">github.com/devikae</a></dd>
+      <dt>Blog</dt><dd><a href="https://velog.io/@tinwo" target="_blank" rel="noopener">velog.io/@tinwo</a></dd>
+    </dl>
+  </header>
+<section><p>SI 현장에서 기능 개발, 유지보수와 운영 장애 대응을 맡았습니다. 개인 프로젝트 Snowthing에서는 동시성, 데이터 정합성, 외부 API 연동, 배포와 복구를 설계하고 검증했습니다. 각 사례에 선택 근거와 제약, 로컬 실험과 운영 기록의 구분을 함께 적었습니다.</p></section>
+<section><h2>PROJECT</h2>
+<div class="entry"><h3 class="et"><a href="https://snowthing.org">Snowthing</a> / 겨울 스포츠 커뮤니티</h3><p class="em">2026.07 ~ 진행 중 / 개인 프로젝트 / 1인 개발</p>
+<p class="domain">게시판, 중고장터, 카풀, 실시간 라이브톡, 슬로프캠을 제공합니다. 기획, 설계, 화면, API, DB, 배포, 운영을 맡았고, AI 도구가 작성한 코드도 직접 검토하고 검증했습니다.</p>
+<ul><li>기록: <a class="lk" href="https://github.com/devikae/snowthing">github.com/devikae/snowthing</a> / 저장소 docs에 ADR과 벤치마크 기록</li>
+<li>구현 규모: 커밋 328건, 병합 PR 52건, 백엔드 테스트 700건 이상, 운영 마이그레이션 32개, 설계 문서 124개 (2026-11 기준)</li>
+<li>운영 규모: EC2 t3.small 1대와 RDS, S3, CloudFront. 게시글 86건에는 시드 글이 포함됩니다. 실사용자 수와 트래픽은 아직 집계하지 않았으며, 대규모 운영 경험으로 제시하지 않습니다.</li></ul></div>
+</section>
+<section><h2>EXPERIENCE</h2>
+<div class="entry"><h3 class="et">피플앤드테크놀러지 / SI 백엔드 개발</h3><p class="em">2025.08 ~ 2026.04</p>
+<ul><li>백엔드 API 개발, 기능 개선, 유지보수를 맡았습니다. 사용자 조작 중 화면과 데이터 상태가 어긋나는 오류와 운영 런타임 예외를 추적해 해결했습니다.</li>
+<li>Highcharts 지도 대시보드의 지역별 데이터 표시를 개선하고 현업 요청 기능을 개발했습니다.</li></ul></div>
+<div class="entry"><h3 class="et">세이소프트 / SI 백엔드 개발</h3><p class="em">2023.03 ~ 2025.08</p>
+<ul><li>공공기관 행정 시스템, 정책 포털, 성과관리, 모바일 커뮤니티의 개발과 유지보수를 맡았습니다.</li>
+<li>서버 로그와 디버깅으로 운영 장애를 분석하고 핫픽스를 배포했습니다. 레거시 데이터 처리 로직을 리팩토링하고 Java 기반 RESTful API 연동 구조를 구축했습니다.</li></ul></div>
+</section>
+<section><h2>TECH STACK</h2>
+<dl class="kv"><dt>Language</dt><dd>Java 21, TypeScript</dd>
+<dt>Backend</dt><dd>Spring Boot 4.1, Spring Security, Spring Data JPA, Querydsl, Spring WebSocket(STOMP)</dd>
+<dt>Database</dt><dd>MySQL 8</dd><dt>Frontend</dt><dd>Next.js 16, React 19</dd>
+<dt>Infra</dt><dd>AWS EC2, RDS, S3, CloudFront, ECR, SES, SSM, SNS, Lambda, Docker Compose, Nginx</dd>
+<dt>CI/CD</dt><dd>GitHub Actions, AWS OIDC</dd><dt>관측</dt><dd>Pinpoint, CloudWatch, Discord 알림</dd>
+<dt>Test</dt><dd>JUnit 5, Mockito, Spring Boot Test</dd></dl>
+</section>
+
+<section><p><a class="act" href="./">기술경력 보기</a></p></section>
+<footer><span>이주석 / sseok2020@naver.com</span><span>최종 수정 2026-11-06</span></footer>
+</main>
+<script>
+  document.getElementById('savePdf').addEventListener('click', () => window.print());
+  const copy = document.getElementById('copyMail');
+  if (copy) copy.addEventListener('click', e => {
+    const t = document.getElementById('mail').textContent;
+    try { navigator.clipboard.writeText(t).then(() => { e.target.textContent = '복사됨'; setTimeout(() => e.target.textContent = '복사', 1500); }, () => {}); } catch {}
+  });
+</script>
+</body>
+</html>
